@@ -1,9 +1,9 @@
 /* PLUS ONE — site v2（A 實驗室線框 × D 三色系統） */
 
-@font-face{font-family:"Alegreya Sans SC";src:url("../fonts/AlegreyaSansSC-Bold.ttf") format("truetype");font-weight:700;font-display:swap}
-@font-face{font-family:"Alegreya Sans SC";src:url("../fonts/AlegreyaSansSC-Black.ttf") format("truetype");font-weight:900;font-display:swap}
-@font-face{font-family:"Mona Sans";src:url("../fonts/MonaSans-VariableFont.ttf") format("truetype");font-weight:100 900;font-stretch:75% 125%;font-display:swap}
-@font-face{font-family:"Noto Sans TC";src:url("../fonts/NotoSansTC-VariableFont.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Alegreya Sans SC";src:url("../fonts/AlegreyaSansSC-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Alegreya Sans SC";src:url("../fonts/AlegreyaSansSC-Black.woff2") format("woff2");font-weight:900;font-display:swap}
+@font-face{font-family:"Mona Sans";src:url("../fonts/MonaSans-VariableFont.woff2") format("woff2");font-weight:100 900;font-stretch:75% 125%;font-display:swap}
+@font-face{font-family:"Noto Sans TC";src:url("../fonts/NotoSansTC-sub.woff2") format("woff2");font-weight:100 900;font-display:swap}
 
 :root{
   --paper:#eeece7; --paper-2:#e4e1da; --ink:#15130f; --ink-2:rgba(21,19,15,.7); --ink-3:rgba(21,19,15,.62);
