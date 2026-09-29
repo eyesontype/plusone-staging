@@ -51,13 +51,24 @@
 
   <!-- 首屏 -->
   <section class="bh" aria-labelledby="bh-title">
-    <!-- 暫用舊站 Hero-image-02，之後換成新拍的 HR-01 -->
-    <img src="assets/photos/HR-01.webp" alt="越野跑者站在山稜步道上" width="1672" height="941" fetchpriority="high" decoding="async">
+    <!-- HR-01～04 暫用舊站 Hero-image，之後換成新拍的照片 -->
+    <div class="bh-slides">
+      <img class="on" src="assets/photos/HR-01.webp" alt="越野跑者站在山稜步道上" width="1672" height="941" fetchpriority="high" decoding="async">
+      <img data-src="assets/photos/HR-02.webp" alt="跑者在田徑場跑道上慢跑" width="1672" height="941" decoding="async" style="object-position:center top">
+      <img data-src="assets/photos/HR-03.webp" alt="自行車手騎在海岸公路上" width="1672" height="941" decoding="async" style="object-position:center top">
+      <img data-src="assets/photos/HR-04.webp" alt="運動後在淋浴間沖洗頭髮" width="1538" height="1022" decoding="async" style="object-position:center top">
+    </div>
     <div class="bh-in">
       <p class="k">Plus One · Design for Athlete</p>
       <h1 id="bh-title">運動後的<br>第一道清潔</h1>
       <p class="bh-sub">專為長時間戶外運動設計的深層潔淨系列。徹底擊退汗水、油脂與髒污，讓每一次清洗都是一場重新開始。</p>
       <div class="bh-cta"><a class="btn bh-btn" href="#top-trio">探索產品 <span class="arr">→</span></a></div>
+      <div class="bh-dots" role="group" aria-label="切換主視覺照片">
+        <button type="button" class="on" aria-label="第 1 張照片" aria-pressed="true"></button>
+        <button type="button" aria-label="第 2 張照片" aria-pressed="false"></button>
+        <button type="button" aria-label="第 3 張照片" aria-pressed="false"></button>
+        <button type="button" aria-label="第 4 張照片" aria-pressed="false"></button>
+      </div>
     </div>
     <ol class="bh-steps" aria-label="賽後三步驟">
       <li class="sh"><span>01</span>洗頭皮</li>

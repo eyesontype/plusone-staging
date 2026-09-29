@@ -361,7 +361,16 @@ a:hover .arr{transform:translateX(4px)}
 
 /* ---------- 品牌主視覺 ---------- */
 .bh{position:relative;display:flex;align-items:flex-end;min-height:clamp(520px,76vh,760px);border:1px solid var(--line);border-top:0;overflow:hidden;background:#1a1712;color:#f4efe6}
-.bh>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.bh-slides{position:absolute;inset:0}
+.bh-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:0;transition:opacity 1.2s ease}
+.bh-slides img.on{opacity:1}
+.bh-dots{display:flex;gap:4px;margin-top:28px;margin-left:-6px}
+.bh-dots button{width:40px;height:28px;padding:0 6px;background:none;border:0;cursor:pointer;display:flex;align-items:center}
+.bh-dots button::before{content:"";display:block;width:100%;height:2px;background:rgba(244,239,230,.45);transition:background .3s,height .3s}
+.bh-dots button.on::before{background:#f4efe6;height:3px}
+.bh-dots button:hover::before{background:#f4efe6}
+.bh-dots button:focus-visible{outline:2px solid #f4efe6;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.bh-slides img{transition:none}}
 .bh::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,13,10,.78) 0%,rgba(15,13,10,.45) 42%,rgba(15,13,10,0) 72%),linear-gradient(0deg,rgba(15,13,10,.55) 0%,rgba(15,13,10,0) 45%)}
 .bh-in{position:relative;z-index:1;padding:clamp(24px,5vw,64px);max-width:760px}
 .bh .k{color:#f4efe6}
