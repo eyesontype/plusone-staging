@@ -17,7 +17,7 @@
   });
 })();
 
-// 首頁主視覺輪播：4.5 秒換一張，滑鼠移上或鍵盤聚焦時暫停；系統設定「減少動態」時不自動播放
+// 首頁主視覺輪播：4.5 秒換一張、自動循環；鍵盤聚焦在圓點時暫停；系統設定「減少動態」時不自動播放
 (function () {
   var box = document.querySelector('.bh');
   if (!box) return;
@@ -48,8 +48,6 @@
   for (var d = 0; d < dots.length; d++) {
     dots[d].addEventListener('click', (function (i) { return function () { stop(); go(i); start(); }; })(d));
   }
-  box.addEventListener('mouseenter', stop);
-  box.addEventListener('mouseleave', start);
   box.addEventListener('focusin', stop);
   box.addEventListener('focusout', start);
   document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
