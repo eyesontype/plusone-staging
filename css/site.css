@@ -133,7 +133,7 @@ a:hover .arr{transform:translateX(4px)}
 .panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line)}
 .panel{padding:clamp(20px,2.6vw,32px);display:flex;flex-direction:column;gap:22px;min-width:0}
 .panel .top{display:flex;justify-content:space-between;align-items:start;gap:12px}
-.panel .step{font-family:var(--d);font-weight:900;font-size:clamp(64px,7vw,104px);line-height:.8}
+.panel .step{font-weight:900;font-size:clamp(30px,3.3vw,46px);line-height:1.1;white-space:nowrap}
 .panel .when{font:600 12px/1.6 var(--b);letter-spacing:.14em;text-transform:uppercase;text-align:right}
 .panel h3{font-family:var(--d);font-weight:900;font-size:clamp(26px,2.6vw,34px);letter-spacing:.02em;line-height:1}
 .panel .zh{font-size:15px;font-weight:700;margin-top:6px}
@@ -221,10 +221,12 @@ a:hover .arr{transform:translateX(4px)}
 .p-hero .ph{--r:4/5;border-right:1px solid var(--line)}
 .p-hero .tx{padding:clamp(24px,4vw,56px);display:flex;flex-direction:column;gap:22px}
 .p-hero .stepline{display:flex;justify-content:space-between;align-items:center;gap:12px;font:600 12px var(--b);letter-spacing:.14em;text-transform:uppercase}
-.p-hero .stepline .nums{display:flex;gap:4px}
-.p-hero .stepline .nums a,.p-hero .stepline .nums span{width:28px;height:28px;display:grid;place-items:center;border:1px solid currentColor;text-decoration:none;font-family:var(--d);font-weight:900;font-size:14px}
-.p-hero .stepline .nums [aria-current]{background:currentColor}
-.p-hero .stepline .nums [aria-current] i{color:var(--hero-bg);font-style:normal}
+.p-hero .stepline .nums{display:flex;gap:12px;align-items:center}
+.p-hero .stepline .nums a,.p-hero .stepline .nums span{width:14px;height:14px;border-radius:50%;border:1px solid currentColor;display:block}
+.p-hero .stepline .nums .d-sh{background:#cfe24f}
+.p-hero .stepline .nums .d-co{background:#e2531a}
+.p-hero .stepline .nums .d-bw{background:#c9763f}
+.p-hero .stepline .nums [aria-current]{outline:2px solid currentColor;outline-offset:3px}
 .p-hero .en-name{font-family:var(--d);font-weight:900;font-size:clamp(40px,5.4vw,76px);line-height:.9;letter-spacing:.01em}
 .p-hero h1{font-size:clamp(22px,2.4vw,30px);font-weight:900}
 .p-hero .sub{font:600 13px var(--b);letter-spacing:.06em;opacity:.85;margin-top:4px}
