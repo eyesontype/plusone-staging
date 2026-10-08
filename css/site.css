@@ -415,3 +415,28 @@ a:hover .arr{transform:translateX(4px)}
   /* 品牌理念照片：手機版把人物移到畫面中間 */
   .br01 img{object-position:88% center}
 }
+
+/* ---------- 動態效果 ---------- */
+/* A 捲動淡入：只有 JS 啟動（html.js）時才先隱藏，JS 沒跑內容照樣看得到 */
+.panel{transition:filter .3s ease}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d,0ms),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms),filter .3s ease}
+.js .rv.in{opacity:1;transform:none}
+/* B OUT! 大字由左往右擦出，右側四個 OUT! 依序亮起 */
+.js .outsec .big{clip-path:inset(-25% 100% -25% 0);transition:clip-path .9s cubic-bezier(.2,.7,.2,1) .2s}
+.js .outsec.in .big{clip-path:inset(-25% -5% -25% 0)}
+.js .outsec .outlist .out{opacity:.18;transition:opacity .45s ease}
+.js .outsec.in .outlist .out{opacity:1}
+.js .outsec.in .outlist li:nth-child(1) .out{transition-delay:.7s}
+.js .outsec.in .outlist li:nth-child(2) .out{transition-delay:.9s}
+.js .outsec.in .outlist li:nth-child(3) .out{transition-delay:1.1s}
+.js .outsec.in .outlist li:nth-child(4) .out{transition-delay:1.3s}
+/* C 照片懸停放大、D 產品色塊互動：只在有滑鼠的裝置 */
+.ph.has-img img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.sports figcaption span{font-variant-numeric:tabular-nums}
+@media (hover:hover){
+  .ph.has-img:hover img,a:hover .ph.has-img img{transform:scale(1.04)}
+  .who .ph.has-img:hover img,.quote .ph.has-img:hover img{transform:none}
+  .panels:hover .panel{filter:brightness(.8)}
+  .panels:hover .panel:hover{filter:brightness(1.06)}
+  .panel:hover .more .arr{transform:translateX(6px)}
+}
