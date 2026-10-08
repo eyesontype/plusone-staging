@@ -28,7 +28,11 @@
   function loadRest() {
     for (var j = 0; j < slides.length; j++) {
       var ds = slides[j].getAttribute('data-src');
-      if (ds) { slides[j].src = ds; slides[j].removeAttribute('data-src'); }
+      if (ds) {
+        var dss = slides[j].getAttribute('data-srcset');
+        if (dss) { slides[j].srcset = dss; slides[j].removeAttribute('data-srcset'); }
+        slides[j].src = ds; slides[j].removeAttribute('data-src');
+      }
     }
   }
   if (document.readyState === 'complete') loadRest(); else window.addEventListener('load', loadRest);
@@ -113,4 +117,29 @@
     }
   }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
   for (var t = 0; t < targets.length; t++) io.observe(targets[t]);
+})();
+
+// 頁面載完後，在背景依序把後面的照片先抓好（一次 2 張），捲到時就不用等
+// 使用者開了省流量模式時不做
+(function () {
+  var c = navigator.connection;
+  if (c && c.saveData) return;
+  function run() {
+    var list = Array.prototype.slice.call(document.querySelectorAll('img[loading="lazy"]'));
+    var i = 0, active = 0;
+    function next() {
+      while (active < 2 && i < list.length) {
+        var im = list[i++];
+        if (im.complete && im.naturalWidth) continue;
+        active++;
+        var done = (function () { var called = false; return function () { if (called) return; called = true; active--; next(); }; })();
+        im.addEventListener('load', done); im.addEventListener('error', done);
+        setTimeout(done, 8000);
+        im.loading = 'eager';
+      }
+    }
+    next();
+  }
+  function later() { setTimeout(run, 1200); }
+  if (document.readyState === 'complete') later(); else window.addEventListener('load', later);
 })();
