@@ -383,12 +383,17 @@ a:hover .arr{transform:translateX(4px)}
 .bh-btn:hover{background:#fff;border-color:#fff;color:var(--ink)}
 .bh+.hero{border-top:0}
 @media (max-width:860px){
-  .bh{min-height:0;aspect-ratio:4/5;max-height:680px}
-  .bh::after{background:linear-gradient(0deg,rgba(15,13,10,.85) 0%,rgba(15,13,10,.5) 45%,rgba(15,13,10,.1) 75%)}
+  /* 手機版：照片在上、文字在下，文字不壓在人物上 */
+  .bh{display:block;min-height:0}
+  .bh-slides{position:relative;inset:auto;aspect-ratio:4/3}
+  .bh::after{display:none}
+  .bh-in{padding:26px 22px 26px;max-width:none}
+  .bh h1{font-size:clamp(38px,11vw,56px);margin-top:12px}
+  .bh-dots{margin-top:20px}
   }
 
 /* ---------- 品牌引言（接在三瓶介紹上方） ---------- */
-.intro{border:1px solid var(--line);padding:clamp(40px,7vw,96px) clamp(24px,6vw,88px);text-align:center}
+.intro{border:1px solid var(--line);padding:clamp(40px,7vw,96px) clamp(24px,6vw,88px);text-align:center;background:var(--ink);color:var(--paper)}
 .intro-zh{font-weight:700;font-size:clamp(20px,2.3vw,30px);line-height:1.7;margin-inline:auto;text-wrap:balance}
-.intro-en{margin-top:clamp(18px,2.4vw,28px);font-family:var(--b);font-weight:600;font-size:clamp(12px,1vw,14px);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.intro-en{margin-top:clamp(18px,2.4vw,28px);font-family:var(--b);font-weight:600;font-size:clamp(12px,1vw,14px);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
 @media (max-width:860px){.intro{text-align:left}.intro-zh br{display:none}}
