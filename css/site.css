@@ -419,7 +419,7 @@ a:hover .arr{transform:translateX(4px)}
 /* ---------- 動態效果 ---------- */
 /* A 捲動淡入：只有 JS 啟動（html.js）時才先隱藏，JS 沒跑內容照樣看得到 */
 .panel{transition:filter .3s ease}
-.js .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--d,0ms),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms),filter .3s ease}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease var(--rv-d,0ms),transform .7s cubic-bezier(.2,.7,.2,1) var(--rv-d,0ms),filter .3s ease}
 .js .rv.in{opacity:1;transform:none}
 /* B OUT! 大字由左往右擦出，右側四個 OUT! 依序亮起 */
 .js .outsec .big{clip-path:inset(-25% 100% -25% 0);transition:clip-path .9s cubic-bezier(.2,.7,.2,1) .2s}

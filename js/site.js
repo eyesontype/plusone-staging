@@ -65,7 +65,7 @@
   function add(el, delay) {
     if (!el || el.classList.contains('rv')) return;
     el.classList.add('rv');
-    if (delay) el.style.setProperty('--d', delay + 'ms');
+    if (delay) el.style.setProperty('--rv-d', delay + 'ms');
     targets.push(el);
   }
   // 成排的卡片：同一排依序出現
