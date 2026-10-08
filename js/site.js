@@ -6,13 +6,13 @@
   btn.addEventListener('click', function () {
     var open = menu.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.textContent = open ? 'CLOSE' : 'MENU';
+    btn.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
   });
   menu.addEventListener('click', function (e) {
     if (e.target.closest('a')) {
       menu.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
-      btn.textContent = 'MENU';
+      btn.setAttribute('aria-label', '開啟選單');
     }
   });
 })();

@@ -61,7 +61,15 @@ ul,ol{margin:0;padding:0;list-style:none}
 .dot.sh{background:var(--sh-bg-2);box-shadow:inset 0 0 0 2px var(--sh-fg)}
 .dot.co{background:var(--co-fg)}
 .dot.bw{background:var(--bw-bg-2)}
-.menu-btn{display:none;background:none;border:1px solid var(--line);font:600 12px var(--b);letter-spacing:.12em;padding:8px 12px;color:var(--ink);cursor:pointer}
+.menu-btn{display:none;background:none;border:0;width:44px;height:44px;padding:0;margin-right:-8px;color:var(--ink);cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:10px;right:10px;height:2px;background:currentColor;transition:transform .25s ease,opacity .2s ease,top .25s ease}
+.menu-btn span:nth-child(1){top:14px}
+.menu-btn span:nth-child(2){top:21px}
+.menu-btn span:nth-child(3){top:28px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg)}
+.menu-btn:focus-visible{outline:2px solid var(--co-fg);outline-offset:2px}
 
 /* ---------- 共用區塊 ---------- */
 .sec{padding-block:clamp(64px,9vw,112px) 0}
