@@ -397,3 +397,21 @@ a:hover .arr{transform:translateX(4px)}
 .intro-zh{font-weight:700;font-size:clamp(20px,2.3vw,30px);line-height:1.7;margin-inline:auto;text-wrap:balance}
 .intro-en{margin-top:clamp(18px,2.4vw,28px);font-family:var(--b);font-weight:600;font-size:clamp(12px,1vw,14px);letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
 @media (max-width:860px){.intro{text-align:left}.intro-zh br{display:none}}
+
+/* ---------- 包裝細節：四點各配一張圖 ---------- */
+.pack4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);list-style:none;margin:0;padding:0}
+.pack4 li{border-right:1px solid var(--line);display:flex;flex-direction:column}
+.pack4 li:last-child{border-right:0}
+.pack4 .ph{--r:1/1;border-bottom:1px solid var(--line)}
+.pack4 .tx{padding:16px 20px 20px;display:grid;gap:4px}
+.pack4 .tx span{font:700 13px var(--b);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.pack4 .tx b{font-size:16px}
+.pack4 .tx p{font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){
+  .pack4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pack4 li:nth-child(2n){border-right:0}
+  .pack4 li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .pack4 .tx{padding:14px 14px 16px}
+  /* 品牌理念照片：手機版把人物移到畫面中間 */
+  .br01 img{object-position:88% center}
+}
