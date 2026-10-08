@@ -421,7 +421,7 @@ a:hover .arr{transform:translateX(4px)}
   .pack4 li:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .pack4 .tx{padding:14px 14px 16px}
   /* 品牌理念照片：手機版把人物移到畫面中間 */
-  .br01 img{object-position:88% center}
+  .br01 img{object-position:84% center}
 }
 
 /* ---------- 動態效果 ---------- */
