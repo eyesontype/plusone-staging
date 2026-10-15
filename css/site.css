@@ -93,11 +93,6 @@ a:hover .arr{transform:translateX(4px)}
 
 /* ---------- 首頁：首屏 ---------- */
 .new{position:absolute;z-index:2;top:12px;right:12px;background:var(--co-deep);color:#fff;font:800 12px var(--b);letter-spacing:.14em;padding:4px 8px}
-.strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-top:0;font-family:var(--b);font-size:12.5px}
-.strip li{padding:12px 16px;border-right:1px solid var(--line);display:flex;justify-content:space-between;gap:8px}
-.strip li:last-child{border-right:0}
-.strip b{font-weight:700}
-.strip span{color:var(--ink-3);font-variant-numeric:tabular-nums}
 
 /* ---------- 首頁：困擾 ---------- */
 .problems{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line)}
@@ -122,8 +117,8 @@ a:hover .arr{transform:translateX(4px)}
 .by{display:flex;gap:6px;align-items:center;font:600 12px var(--b);letter-spacing:.08em;color:var(--ink-3);white-space:nowrap}
 
 /* ---------- 三瓶系統（D） ---------- */
-.panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line)}
-.panel{padding:clamp(20px,2.6vw,32px);display:flex;flex-direction:column;gap:22px;min-width:0}
+.panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+.panel{border:1px solid var(--line);padding:clamp(20px,2.6vw,32px);display:flex;flex-direction:column;gap:22px;min-width:0}
 .panel .shot{display:block;margin:calc(-1*clamp(20px,2.6vw,32px)) calc(-1*clamp(20px,2.6vw,32px)) 0;border-bottom:1px solid var(--line)}
 .panel .shot .ph{--r:4/5}
 .panel .top{display:flex;justify-content:space-between;align-items:start;gap:12px}
@@ -142,8 +137,6 @@ a:hover .arr{transform:translateX(4px)}
 .p-co{background:var(--co-bg);color:var(--co-ink)}
 .p-co .step,.p-co h3,.p-co .out{color:var(--co-fg)}
 .p-bw{background:var(--bw-bg);color:var(--bw-fg)}
-.tip{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;border:1px solid var(--line);border-top:0;padding:16px 20px;font-size:14.5px}
-.tip .clock{font:700 26px var(--b);font-stretch:80%;font-variant-numeric:tabular-nums;color:var(--co-fg);letter-spacing:.02em;white-space:nowrap}
 
 /* ---------- 品牌宣言 ---------- */
 .manifesto{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);border:1px solid var(--line)}
@@ -330,9 +323,6 @@ a:hover .arr{transform:translateX(4px)}
   .panels,.reviews,.pair,.duo{grid-template-columns:minmax(0,1fr)}
   .review,.pair a,.duo > *:first-child{border-right:0;border-bottom:1px solid var(--line)}
   .review:last-child,.pair a:last-child{border-bottom:0}
-  .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .strip li:nth-child(2){border-right:0}
-  .strip li:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .ingr,.scenes{grid-template-columns:minmax(0,1fr)}
   .ingr li,.scenes li{border-right:0;border-bottom:1px solid var(--line)}
   .ingr li:last-child,.scenes li:last-child{border-bottom:0}
